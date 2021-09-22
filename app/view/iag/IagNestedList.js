@@ -1,26 +1,9 @@
-
 Ext.define('VT.view.iag.IagNestedList',{
     extend: 'Ext.dataview.NestedList',
-    xtype: 'iaglist',
+    alias: 'widget.iagnestedlist',
 
-    controller: 'extend',
+    controller: 'vt',
 
-    requires: [
-        'VT.view.iag.IagNestedListController',
-        'VT.view.iag.IagNestedListModel',
-        'VT.store.Iag'
-    ],
-
-    
-    viewModel: {
-        type: 'iag-iagnestedlist'
-    },
-
-    // html: 'Hello, World!!'
-    // renderTo: document.body,
-    // height: 300,
- 
-    title: 'Телефонен указател',
     displayField: 'text',
     toolbar: {
         items: [
@@ -29,33 +12,27 @@ Ext.define('VT.view.iag.IagNestedList',{
             },
             {
                 xtype: 'button',
-                // id: 'btnBackToHome',
                 align: 'right',
-                text: 'Начало',
+                // text: 'Меню',
+                iconCls: 'x-fa fa-home',
                 handler: function(){
-                    // Ext.getCmp('#iaglist');
                     var main = Ext.getCmp('main');
-                     main.setActiveItem(0);
-                    console.log('tap');
+                    main.setActiveItem(0);
                 }
             }
         ],
     },
-    // store: {
-    //     type:'iag',
-    // },
+   
     store: {
-        // type: 'iag',
+        id: 'iagStore',
         model: 'VT.model.Empl',
         root: {},
         proxy: {
             type: 'jsonp',
-            // url: null,
-            url: 'https://vasil.iag.bg/tel/v3/rdg',
+            url: 'https://vasil.iag.bg/tel/v3/iag',
             reader: {
                 type: 'json',
                 rootProperty: 'items',
-                // totalProperty: 'total'
             }
         },
     },

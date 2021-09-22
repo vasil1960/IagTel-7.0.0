@@ -1,16 +1,14 @@
 
 Ext.define('VT.view.home.Home',{
     extend: 'Ext.panel.Panel',
-    // alies: 'widget.home',
-    xtype:'home',
+    alias: 'widget.home',
 
     requires: [
         'VT.view.home.HomeController',
         'VT.view.home.HomeModel',
     ],
 
-    controller: 'extend',
-    // controller: 'home',
+    controller: 'vt',
     viewModel: {
         type: 'home-home'
     },
@@ -34,53 +32,6 @@ Ext.define('VT.view.home.Home',{
                     }
                 ]
             },
-            // {
-            //     xtype: 'panel',
-            //     flex: 2,
-            //     items: [
-            //         {
-            //             xtype: 'button',
-            //             text:'Изпълнителна агенция',
-            //             ui: 'action',
-            //             id: 'iagBtn',
-            //             margin: 10
-            //         // flex:1
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             text:'Регионални дирекции',
-            //             id: 'rdgBtn',
-            //             margin: 10
-            //         // flex:1
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             text:'Държавни, ловни и др. стопанства',
-            //             id: 'dgsBtn',
-            //             margin: 10
-            //         // flex:1
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             text:'Търсене',
-            //             id: 'searchBtn',
-            //             margin: 10
-            //         // flex:1
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             text:'За приложението',
-            //             id: 'aboutBtn',
-            //             margin: 10
-            //         // flex:1
-            //         }
-            //     ]
-            // },
-            // {
-            //     xtype: 'panel',
-            //     flex: 1,
-            //     html: '<small style="center">2021</small>'
-            // }
             {
                 xtype: 'panel',
                 flex: 1,
@@ -100,20 +51,8 @@ Ext.define('VT.view.home.Home',{
                                 icon: 'true',
                                 ui:'action',
                                 iconAlign: 'top',
-                                iconCls: 'team',
+                                iconCls: 'x-fa fa-user',
                                 text: 'ИАГ',
-                                // listeners:{
-                                //     tap: 'onIagBtnTap',
-                                //     // scope: 'controller'
-                                // },
-                                // reference:'iagBtn',
-                                // handler: function(){
-                                //     // Ext.getCmp('#iaglist');
-                                //     // console.log('tap');
-                                //     // var iagnestedlist = Ext.create(VT.view.main.Main);
-                                //     // console.log(iagnestedlist);
-                                //     // iagnestedlist.setActiveItem(1);
-                                // }
                             },
                             {
                                 xtype: 'spacer',
@@ -126,7 +65,7 @@ Ext.define('VT.view.home.Home',{
                                 ui:'action',
                                 id: 'rdgBtn',
                                 iconAlign: 'top',
-                                iconCls: 'team',
+                                iconCls: 'x-fa fa-users',
                                 text: 'РДГ'
                             }
                         ]
@@ -143,11 +82,8 @@ Ext.define('VT.view.home.Home',{
                                 id: 'dgsBtn',
                                 ui:'action',
                                 iconAlign: 'top',
-                                iconCls: 'team',
+                                iconCls: 'x-fa fa-users',
                                 text: 'ДГС/ДЛС',
-                                // handler: function(){
-                                //     console.log('tap');
-                                // }
                             },
                             {
                                 xtype: 'spacer',
@@ -157,8 +93,9 @@ Ext.define('VT.view.home.Home',{
                                 xtype: 'button',
                                 flex: 1,
                                 id: 'searchBtn',
+                                ui: 'action',
                                 iconAlign: 'top',
-                                iconCls: 'search',
+                                iconCls: 'x-fa fa-search',
                                 text: 'Търсене'
                             }
                         ]
@@ -173,10 +110,10 @@ Ext.define('VT.view.home.Home',{
                                 flex: 1,
                                 ui: 'action',
                                 disabled: false,
-                                id: 'allBtn',
+                                id: 'dpBtn',
                                 iconAlign: 'top',
-                                iconCls: 'team',
-                                text: 'Всички'
+                                iconCls: 'x-fa fa-users',
+                                text: 'ДП'
                             },
                             {
                                 xtype: 'spacer',
@@ -185,6 +122,7 @@ Ext.define('VT.view.home.Home',{
                             {
                                 xtype: 'button',
                                 flex: 1,
+                                ui: 'action',
                                 id: 'aboutBtn',
                                 icon: 'true',
                                 iconAlign: 'top',
@@ -193,36 +131,6 @@ Ext.define('VT.view.home.Home',{
                             }
                         ]
                     },
-                    {
-                        // xtype: 'spacer',
-                        // width: 10,
-                        // flex: 1
-                    },
-                    {
-                        // xtype: 'panel',
-                        // flex: 1,
-                        // margin: '10 0',
-                        // layout: 'hbox',
-                        // items: [
-                        //     // {
-                        //     //     xtype: 'button',
-                        //     //     flex: 1,
-                        //     //     id: 'iagpodBtn',
-                        //     //     iconAlign: 'top',
-                        //     //     iconCls: 'team',
-                        //     //     text: 'ИАГ поделения'
-                        //     // },
-                        //     // {
-                        //     //     xtype: 'spacer',
-                        //     //     width: 10
-                        //     // },
-                        //     // {
-                        //     //     xtype: 'button',
-                        //     //     flex: 1,
-                        //     //     disabled: true
-                        //     // }
-                        // ]
-                    }
                 ]
             }
         ]

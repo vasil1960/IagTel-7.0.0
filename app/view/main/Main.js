@@ -6,67 +6,54 @@
 Ext.define('VT.view.main.Main', {
     extend: 'Ext.Panel',
     xtype: 'main',
-    // reference: 'main',
-    // controller: 'extend',
+
+    controller: 'vt',    
     
     requires: [
         'Ext.MessageBox',
         'Ext.layout.Fit',
         'VT.view.iag.IagNestedList',
         'VT.view.home.Home',
-        'VT.view.ExtendController'
     ],
 
-    controller: 'extend',
-    viewModel: 'main',
-
     id: 'main',
-    // reference:'mainMainPanel',
 
     layout: {
         type: 'card',
         animation: 'fade'
     },
 
-    defaults: {
-        tab: {
-            iconAlign: 'top',
-        }
-    },
-    
-
     tabBarPosition: 'bottom',
 
     items: [
-        // TODO - Replace the content of this view to suit the needs of your application.
         {
-            title: 'Начало',
-            iconCls: 'x-fa fa-home',
-            layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'home',
-                title: 'Изпълнителна агенция по горите',
-                // reference: 'home'
-            }]
+            xtype: 'home',
+            title: 'Изпълнителна агенция по горите',
         },
         {
-            title: 'ИАГ',
-            iconCls: 'x-fa fa-home',
-            layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'iaglist'
-            }]
+            xtype: 'iagnestedlist',
+            title: 'Изпълнителна агенция',
         },
         {
-            title: 'За програмата',
-            iconCls: 'x-fa fa-home',
-            layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'iaglist'
-            }]
+            xtype: 'rdgnestedlist',
+            title: 'Регионални дирекции',
         },
+        {
+            xtype: 'dgsnestedlist',
+            title: 'Горски стопанства',
+        },
+        {
+            html: 'Търсене',// xtype: 'searchnestedlist',
+            title: 'Търсене в БД',
+        },
+        {
+            xtype: 'dpnestedlist',
+            title: 'Държавни предприятия',
+        },
+        {
+            html: 'За приложението',// xtype: 'about',
+            title: 'За приложението',
+        },
+       
     ]
 });
