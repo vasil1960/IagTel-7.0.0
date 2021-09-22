@@ -58,7 +58,7 @@ Ext.define('VT.view.home.Home',{
                             },
                             {
                                 xtype: 'spacer',
-                                width: 10
+                                width: 20
                             },
                             {
                                 xtype: 'button',
@@ -89,7 +89,7 @@ Ext.define('VT.view.home.Home',{
                             },
                             {
                                 xtype: 'spacer',
-                                width: 10
+                                width: 20
                             },
                             {
                                 xtype: 'button',
@@ -119,7 +119,7 @@ Ext.define('VT.view.home.Home',{
                             },
                             {
                                 xtype: 'spacer',
-                                width: 10
+                                width: 20
                             },
                             {
                                 xtype: 'button',
@@ -128,8 +128,8 @@ Ext.define('VT.view.home.Home',{
                                 id: 'aboutBtn',
                                 icon: 'true',
                                 iconAlign: 'top',
-                                iconCls: 'compose',
-                                text: 'За приложението'
+                                iconCls: 'x-fa fa-question',
+                                text: 'Относно'
                             }
                         ]
                     },
