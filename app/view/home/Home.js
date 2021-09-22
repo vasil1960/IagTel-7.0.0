@@ -3,15 +3,17 @@ Ext.define('VT.view.home.Home',{
     extend: 'Ext.panel.Panel',
     alias: 'widget.home',
 
+    controller: 'vt',    
+
     requires: [
-        'VT.view.home.HomeController',
-        'VT.view.home.HomeModel',
+        // 'VT.view.home.HomeController',
+        // 'VT.view.home.HomeModel',
     ],
 
     controller: 'vt',
-    viewModel: {
-        type: 'home-home'
-    },
+    // viewModel: {
+    //     type: 'home-home'
+    // },
 
     // html: 'Hello, World!!'
     config: {
