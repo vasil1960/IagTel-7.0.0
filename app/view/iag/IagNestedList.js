@@ -36,7 +36,7 @@ Ext.define('VT.view.iag.IagNestedList',{
     },
    
     store: {
-        id: 'iagStore',
+        storeId: 'iagStore',
         model: 'VT.model.Empl',
         root: {},
         proxy: {
