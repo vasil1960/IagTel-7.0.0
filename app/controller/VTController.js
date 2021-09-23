@@ -22,6 +22,9 @@ Ext.define('VT.controller.VTController', {
             '#aboutBtn': {
                 tap: 'onAboutBtnTap'
             },
+            // '#vasil':{
+            //     leafitemtap: 'leafItemTap'
+            // }
         })
     },
 
@@ -48,11 +51,16 @@ Ext.define('VT.controller.VTController', {
     onAboutBtnTap: function(){
         this.btnTap(6);
     },
-
+    
     btnTap: function(x){
         var main = Ext.getCmp('main');
         main.setActiveItem(x);
-    }
+    },
+
+
+    // leafItemTap: function(){
+    //     console.log('ttttt');
+    // }
 
 });
 
